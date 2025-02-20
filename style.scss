@@ -14,21 +14,24 @@ body {
   min-height: 100vh;
   text-align: center;
   background-color: white;
+}
 
-  .gallery-title {
+.gallery {
+
+  &-title {
     font-size: 45px;
     margin-bottom: 30px;
   }
 
-  .gallery-container {
+  &-container {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 33px;
     max-width: 980px;
     padding: 0 15px;
   }
 
-  .gallery-item {
+  &-item {
     cursor: pointer;
     overflow: hidden;
     border-radius: 10px;
@@ -42,46 +45,46 @@ body {
     }
 
     &:hover video {
-      transform: scale(1.12);
+      transform: scale(1.05);
+    }
+  }
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+
+  &.active {
+    display: flex;
+  }
+
+  &-content {
+    width: 80%;
+    height: 80%;
+
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
     }
   }
 
-  .popup {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-
-    &.active {
-      display: flex;
-    }
-
-    &-content {
-      width: 80%;
-      height: 80%;
-
-      video {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 10px;
-      }
-
-      &-close-button {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        font-size: 40px;
-        cursor: pointer;
-        background: none;
-        color: white;
-      }
-    }
+  &-close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 40px;
+    cursor: pointer;
+    background: none;
+    color: white;
   }
 }

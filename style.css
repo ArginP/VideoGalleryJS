@@ -14,33 +14,35 @@ body {
   text-align: center;
   background-color: white;
 }
-body .gallery-title {
+
+.gallery-title {
   font-size: 45px;
   margin-bottom: 30px;
 }
-body .gallery-container {
+.gallery-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 33px;
   max-width: 980px;
   padding: 0 15px;
 }
-body .gallery-item {
+.gallery-item {
   cursor: pointer;
   overflow: hidden;
   border-radius: 10px;
   height: 370px;
 }
-body .gallery-item video {
+.gallery-item video {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.3s;
 }
-body .gallery-item:hover video {
-  transform: scale(1.12);
+.gallery-item:hover video {
+  transform: scale(1.05);
 }
-body .popup {
+
+.popup {
   position: fixed;
   top: 0;
   left: 0;
@@ -52,20 +54,20 @@ body .popup {
   align-items: center;
   z-index: 1000;
 }
-body .popup.active {
+.popup.active {
   display: flex;
 }
-body .popup-content {
+.popup-content {
   width: 80%;
   height: 80%;
 }
-body .popup-content video {
+.popup-content video {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 10px;
 }
-body .popup-content-close-button {
+.popup-close-button {
   position: absolute;
   top: 20px;
   right: 20px;
