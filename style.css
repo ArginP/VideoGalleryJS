@@ -1,6 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Kurale&display=swap");
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Kurale", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+  background-color: white;
+}
+body .gallery-title {
+  font-size: 45px;
+  margin-bottom: 30px;
+}
+body .gallery-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 33px;
+  max-width: 980px;
+  padding: 0 15px;
+}
+body .gallery-item {
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 10px;
+  height: 370px;
+}
+body .gallery-item video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+body .gallery-item:hover video {
+  transform: scale(1.12);
+}
+body .popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+body .popup.active {
+  display: flex;
+}
+body .popup-content {
+  width: 80%;
+  height: 80%;
+}
+body .popup-content video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+body .popup-content-close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 40px;
+  cursor: pointer;
+  background: none;
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */
